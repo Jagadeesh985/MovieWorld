@@ -1,0 +1,139 @@
+.card-slider {
+  display: flex !important;
+  position: relative;
+  width: 80vw;
+}
+.test-slider-card {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  margin: auto;
+}
+
+.test-slider-card label {
+  text-align: center;
+  width: 15vw;
+  height: 3rem;
+  text-overflow: clip;
+}
+
+/* Add the following style to show .slider-card-details when hovering over .test-slider-card */
+.card-slider:hover .test-slider-card img {
+  filter: blur(10px);
+}
+.card-slider:hover .slider-card-details {
+  display: flex;
+  z-index: 5;
+  top: 30%;
+}
+
+.slider-card-details {
+  display: none;
+  flex-direction: column;
+  width: 18vw;
+  position: absolute;
+  /* left: 41%; */
+  left: 5%;
+  right: 0;
+  height: 35vh;
+  margin: auto;
+  font-size: 0.9rem;
+  backdrop-filter: blur(12px);
+  /* z-index: -1; */
+  color: white;
+  border: 1px solid gold;
+  background-color: rgba(0, 0, 0, 0.286);
+}
+
+.overview-label {
+  height: 9.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slider-card-details-watch {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.slider-card-details-watch button {
+  background-color: gold;
+  border: none;
+  border-radius: 2px;
+  padding: 3px;
+}
+.mini-sliders {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 95vw;
+}
+
+.popup {
+  position: relative;
+  background: #303b42;
+  margin: auto;
+  width: 50%;
+  height: 85vh;
+  top: 15%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* box-shadow: 4px 7px gold; */
+}
+
+#popup {
+  height: 150%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  backdrop-filter: blur(5px);
+  top: 0;
+}
+
+/* Element | http://localhost:3000/test */
+
+/* .popup > div:nth-child(1) > h2:nth-child(1) {
+  background: #242e34;
+  color: gold;
+  justify-content: center;
+  display: flex;
+}
+
+
+.popup > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.popup > div:nth-child(1) > div:nth-child(1) > button:nth-child(2) {
+  background: none;
+  color: white;
+  border: none;
+  padding: 0px 10px 0px 10px;
+  font-size: 1.75rem;
+} */
+#close-popup {
+  display: none;
+}
+.popup-head-close-div {
+  /* position: fixed; */
+  display: flex;
+  /* width: 100%; */
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #242e34;
+}
+.popup-head-close-div h2 {
+  color: gold;
+}
+.popup-head-close-div button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.75vw;
+  padding: 0px 9px;
+}
+.popup-content-span {
+  color: gold;
+}

@@ -1,0 +1,60 @@
+:root {
+  --bg-color: #242428;
+  --text-color: white;
+}
+.App {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+body {
+  overflow-x: hidden;
+  /* user-select: none; */
+}
+#home-carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  /* height: 150px; */
+  width: 150px;
+  margin: 66px 13px;
+}
+.carousel-image {
+  background-color: transparent(#2a2b31);
+  display: block;
+  width: 80%;
+  object-fit: fill;
+  height: 600px;
+  margin: auto;
+  /* background: red; */
+}
+.carousel-caption {
+  font-size: 1.5rem;
+  right: 0%;
+  left: 0%;
+  background: #2d2a2647;
+  bottom: 0px;
+  backdrop-filter: blur(5px);
+  color: orange;
+}
+.home-carousel-spinner {
+  height: 600px;
+}
+.spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  top: 50%;
+}
+.error-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  top: 50%;
+}

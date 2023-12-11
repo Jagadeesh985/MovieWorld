@@ -1,0 +1,25 @@
+#main-slider {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
+}
+.slider-card-main {
+  display: flex !important;
+}
+
+.slider-card-main img {
+  height: 620px !important;
+  /* width: 80vw; */
+}
+.slider-card-content div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 30%;
+  padding: 5vw;
+  height: 600px;
+}
+.slider-card-content div label {
+  color: gold;
+}

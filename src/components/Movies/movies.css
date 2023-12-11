@@ -1,0 +1,45 @@
+#movie-main {
+  height: 100%;
+  width: 100vw;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#nav-gap {
+  width: 100vw;
+  height: 15vh;
+}
+.movie-types-btns {
+  position: relative;
+  /* margin: auto; */
+  left: 10vw;
+  /* width: 25vw; */
+}
+.movie-types-btns button {
+  padding: 8px;
+  color: white;
+  border: none;
+  background: none;
+}
+.movie-types-btns button.selected {
+  background: gray;
+}
+.movies-content {
+  position: relative;
+  /* left: 15vh; */
+  background: gray;
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  padding: 2vw;
+  overflow: scroll;
+}
+.slider-card-2 {
+  margin-left: 3vw;
+}

@@ -1,0 +1,86 @@
+.popular-main-child {
+  background: var(--bg-color);
+  width: 95vw;
+  margin: auto;
+  margin: 5vh auto 5vh auto;
+}
+
+.popular-main-child span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: gold;
+  top: 50%;
+  /* border-bottom: 2px solid orange; */
+  margin-bottom: 3vh;
+}
+.popular-main-child span label {
+  font-size: 1.25rem;
+  border-bottom: 2px solid #ff0083;
+}
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  margin: auto;
+}
+.slider-card label {
+  text-align: center;
+  width: 15vw;
+  height: 3rem;
+  text-overflow: clip;
+}
+.slider-card img {
+  border-radius: 15px;
+}
+
+.card-slider:hover .slider-card img {
+  filter: blur(10px);
+}
+.card-slider:hover .slider-card-details {
+  display: flex;
+  z-index: 5;
+  top: 30%;
+}
+.card-slider {
+  display: flex !important;
+  position: relative;
+  /* width: 80vw; */
+}
+.slider-card-details {
+  display: none;
+  flex-direction: column;
+  width: 18vw;
+  position: absolute;
+  /* left: 41%; */
+  left: 5%;
+  right: 0;
+  height: 35vh;
+  margin: auto;
+  font-size: 0.9rem;
+  backdrop-filter: blur(12px);
+  /* z-index: -1; */
+  color: white;
+  border: 1px solid gold;
+  background-color: rgba(0, 0, 0, 0.286);
+  border-radius: 10px;
+  padding: 0px 8px;
+}
+.overview-label {
+  height: 9.5rem;
+  overflow: scroll;
+  text-overflow: ellipsis;
+}
+.slider-card-details-watch {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.slider-card-details-watch button {
+  background-color: gold;
+  border: none;
+  border-radius: 2px;
+  padding: 2px;
+  margin: 1px;
+}

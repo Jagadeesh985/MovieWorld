@@ -1,0 +1,109 @@
+#movie-main {
+  height: 100%;
+  width: 100vw;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#nav-gap {
+  width: 100vw;
+  height: 15vh;
+}
+.movie-types-btns {
+  position: relative;
+  /* margin: auto; */
+  left: 10vw;
+  /* width: 25vw; */
+}
+.movie-types-btns button {
+  padding: 8px;
+  color: white;
+  border: none;
+  background: none;
+}
+.movie-types-btns button.selected {
+  background: gray;
+  color: gold;
+}
+.movies-content {
+  position: relative;
+  /* left: 15vh; */
+  background: gray;
+  width: 80vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  padding: 2vw;
+  overflow: scroll;
+}
+
+.movietv-slider-card {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  margin: auto;
+}
+.movietv-slider-card label {
+  text-align: center;
+  width: 15vw;
+  height: 3rem;
+  text-overflow: clip;
+}
+.movietv-slider-card img {
+  border-radius: 15px;
+}
+
+.card-slider-card:hover .movietv-slider-card img {
+  filter: blur(10px);
+}
+.card-slider-card:hover .movietv-slider-card-details {
+  display: flex;
+  z-index: 5;
+  top: 30%;
+}
+.card-slider-card {
+  display: flex !important;
+  position: relative;
+  /* width: 80vw; */
+  margin: 5px 30px;
+  /* margin: auto; */
+}
+.movietv-slider-card-details {
+  display: none;
+  flex-direction: column;
+  width: 18vw;
+  position: absolute;
+  /* left: 41%; */
+  left: 5%;
+  right: 0;
+  height: 35vh;
+  margin: auto;
+  font-size: 0.9rem;
+  backdrop-filter: blur(12px);
+  /* z-index: -1; */
+  color: white;
+  border: 1px solid gold;
+  background-color: rgba(0, 0, 0, 0.286);
+}
+.overview-label {
+  height: 9.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movietv-slider-card-details-watch {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.movietv-slider-card-details-watch button {
+  background-color: gold;
+  border: none;
+  border-radius: 2px;
+  padding: 3px;
+}
