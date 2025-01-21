@@ -10,6 +10,8 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import movieTrailer from "movie-trailer";
+import ShowTrailer from "./ShowTrailer";
 
 const itemsList = [
   {
@@ -42,6 +44,8 @@ const itemsList = [
 function Index() {
   const api_key = "6d12d8c51590cd478561b8c0d68dc184";
   let [items, setItems] = useState([]);
+  let [movieTrailerUrl, setMovieTrailerUrl] = useState("");
+  let [showMovieTrailer, setShowMovieTrailer] = useState(false);
   // let [itemsError, setItemsError] = useState(false);
   useEffect(() => {
     // setItems([]);
@@ -104,9 +108,23 @@ function Index() {
             heading={item.heading}
             field={item.field}
             key={index}
+            setMovieTrailerUrl={setMovieTrailerUrl}
+            setShowMovieTrailer={setShowMovieTrailer}
           />
         );
       })}
+      {movieTrailerUrl !== null ? (
+        <ShowTrailer
+          open={showMovieTrailer}
+          handleClose={() => setShowMovieTrailer(false)}
+          movieTrailerUrl={movieTrailerUrl}
+        />
+      ) : (
+        () => {
+          alert("Movie Trailer not found");
+          setShowMovieTrailer(false);
+        }
+      )}
     </div>
   );
 }
@@ -128,6 +146,15 @@ export function SliderCom(props) {
     cssEase: "linear",
     swipeToSlide: true,
   };
+
+  const findMovieTrailerByName = (movieName) => {
+    movieTrailer(movieName).then((res) => {
+      props.setMovieTrailerUrl(res);
+      props.setShowMovieTrailer(true);
+      console.log(res);
+    });
+  };
+
   const items = props.items.map((item, index) => {
     return (
       <div className="card-slider" key={index}>
@@ -160,7 +187,11 @@ export function SliderCom(props) {
               More Details
               <FaAngleDoubleRight />
             </button>
-            <button>
+            <button
+              onClick={() =>
+                findMovieTrailerByName(item.title ? item.title : item.name)
+              }
+            >
               <FaVideo /> Trailer
             </button>
             <button>

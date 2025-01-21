@@ -84,3 +84,9 @@
   padding: 2px;
   margin: 1px;
 }
+.trailer_dialog_container{
+  position: absolute;
+  width: 95vw;
+  height: 95vh;
+  margin: auto;
+}

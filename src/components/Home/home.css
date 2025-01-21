@@ -3,7 +3,7 @@
   --text-color: white;
 }
 .App {
-  background: var(--bg-color);
+  /* background: var(--bg-color); */
   color: var(--text-color);
 }
 body {
